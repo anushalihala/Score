@@ -6,10 +6,10 @@ import asyncio
 import time
 
 client = discord.Client()
-admin_ids = ["269959141508775937"]
+admin_ids = ["501320491047452682"] #["269959141508775937"]
 spam_protector = {}
 
-
+#SCORE CALCULATION: thanks=3, 5 reactions=5. 25 messages=25, strike=-10 (but not added back on removal), 3 strikes => score becomes 0 
 class Help:
     def __init__(self, helpmsg):
         self.message = helpmsg
@@ -767,4 +767,4 @@ async def uptime_count():
 
 
 client.loop.create_task(uptime_count())
-client.run("[BOT-TOKEN]")  # insert token
+client.run(process.env.token)  # insert token
