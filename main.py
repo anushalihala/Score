@@ -4,6 +4,7 @@ import urllib.request
 import sqlib
 import asyncio
 import time
+import os
 
 client = discord.Client()
 admin_ids = ["501320491047452682"] #["269959141508775937"]
@@ -767,4 +768,4 @@ async def uptime_count():
 
 
 client.loop.create_task(uptime_count())
-client.run(process.env.token)  # insert token
+client.run(os.environ['token'])  # insert token
